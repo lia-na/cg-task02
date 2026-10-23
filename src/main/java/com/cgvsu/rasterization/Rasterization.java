@@ -42,7 +42,7 @@ public class Rasterization {
                 double value = dx * dx + dy * dy;
 
                 if (value <= 1.0) {
-                    double distance = Math.sqrt(value);
+                    double distance = Math.sqrt(value);// удаленность от центра
                     Color pixelColor = interpolateColor(colorCenter, colorEdge, distance);
                     pixelWriter.setColor(x, y, pixelColor);
                 }
